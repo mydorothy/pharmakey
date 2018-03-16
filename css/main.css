@@ -1,0 +1,161 @@
+button {
+  background: transparent;
+  border: none; }
+
+.border-b-1 {
+  border-bottom: 1px solid #E0E3E6; }
+
+.substring {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; }
+
+.substring-2 {
+  -webkit-line-clamp: 2; }
+
+.header .time-items {
+  height: 40px;
+  line-height: 40px; }
+  .header .time-items li {
+    display: inline-block;
+    width: 45%; }
+    .header .time-items li input {
+      width: 100%;
+      display: inline;
+      text-align: center; }
+  .header .time-items span {
+    display: inline-block;
+    width: 6%; }
+.header .search {
+  padding: 6px 6px;
+  background-color: #F2F5F7;
+  height: 40px; }
+  .header .search input {
+    border: 1px solid #E0E3E6;
+    border-radius: 6px;
+    width: 80%;
+    line-height: 26px; }
+  .header .search button {
+    width: 18%;
+    text-align: center;
+    height: 26px;
+    font-size: 1rem; }
+
+.content {
+  overflow: hidden;
+  position: relative; }
+  .content .down-update {
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    position: absolute;
+    top: -40px;
+    left: 0; }
+  .content .up-updata {
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    width: 100%; }
+  .content .loading {
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px; }
+  .content .item {
+    padding: 0 6px;
+    position: relative; }
+    .content .item .title {
+      color: #666;
+      font-size: 0.875rem;
+      line-height: 2.6; }
+      .content .item .title .date {
+        float: right; }
+    .content .item ul {
+      padding: 6px 0; }
+      .content .item ul li {
+        line-height: 1.6; }
+        .content .item ul li .label {
+          color: #666;
+          padding-right: 6px; }
+      .content .item ul .substring {
+        width: 80%; }
+      .content .item ul .info span {
+        padding-right: 0.5rem; }
+      .content .item ul .info .name {
+        font-size: 1.15rem; }
+    .content .item button {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      border: 1px solid #38af43;
+      border-radius: 6px;
+      padding: 2px 10px;
+      color: #38af43;
+      font-size: 0.875rem; }
+
+.detail {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  background: #fff; }
+  .detail.fade-enter-active, .detail.fade-leave-active {
+    transition: all .5s; }
+  .detail.fade-enter, .detail.fade-leave-to {
+    opacity: 0; }
+  .detail .title {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 50px;
+    padding: 0 10px; }
+    .detail .title span {
+      float: right;
+      font-size: 1.5rem;
+      color: #666;
+      cursor: pointer; }
+  .detail .item {
+    padding: 10px; }
+    .detail .item .time {
+      color: #666;
+      font-size: 0.875rem;
+      line-height: 2.6; }
+      .detail .item .time .date {
+        float: right; }
+    .detail .item .ul {
+      padding: 10px 0; }
+      .detail .item .ul li {
+        line-height: 40px;
+        border-bottom: 1px solid #E0E3E6; }
+        .detail .item .ul li:last-child {
+          border: none; }
+        .detail .item .ul li label {
+          float: left;
+          padding-right: 10px; }
+        .detail .item .ul li .drug {
+          display: block;
+          overflow: hidden; }
+          .detail .item .ul li .drug p {
+            color: red;
+            font-size: 0.875rem;
+            line-height: 1rem;
+            padding-bottom: 10px; }
+            .detail .item .ul li .drug p span {
+              padding: 0 6px; }
+          .detail .item .ul li .drug .num {
+            float: right;
+            color: #333; }
+      .detail .item .ul .doctor {
+        text-align: right; }
+        .detail .item .ul .doctor span {
+          padding-right: 20px; }
+        .detail .item .ul .doctor .l {
+          color: #666;
+          font-size: 0.875rem; }
+
+/*# sourceMappingURL=main.css.map */

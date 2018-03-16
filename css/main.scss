@@ -1,0 +1,214 @@
+
+@charset "UTF-8";
+$border:#E0E3E6;
+$mainColor:#38af43;
+
+button {
+  background: transparent;
+  border:none;
+}
+.border-b-1 {
+  border-bottom:1px solid $border;
+}
+.substring {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp: 1;
+}
+.substring-2 {
+  -webkit-line-clamp: 2;
+}
+.header {
+  .time-items {
+    height: 40px;
+    line-height: 40px;
+    li {
+      display: inline-block;
+      width: 45%;
+      input {
+        width: 100%;
+        display: inline;
+        text-align: center;
+      }
+    }
+    span {
+      display: inline-block;
+      width:6%;
+    }
+  }
+  .search {
+    padding: 6px 6px;
+    background-color: #F2F5F7;
+    height: 40px;
+    input {
+      border:1px solid $border;
+      border-radius: 6px;
+      width: 80%;
+      line-height: 26px;
+    }
+    button {
+      width: 18%;
+      text-align: center;
+      height: 26px;
+      font-size: 1rem;
+    }
+  }
+}
+
+.content {
+  overflow: hidden;
+  position: relative;
+  .down-update {
+    display:block;
+    width:100%;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    position: absolute;
+    top:-40px;
+    left:0;
+  }
+  .up-updata {
+    text-align: center;
+    line-height: 40px;
+    height:40px;
+    width:100%;
+  }
+  .loading {
+    height: 22px;
+    display:inline-block;
+    vertical-align: middle;
+    margin-left:5px;
+  }
+  .item {
+    padding: 0 6px;
+    position: relative;
+    .title {
+      color:#666;
+      font-size: 0.875rem;
+      line-height: 2.6;
+      .date {
+        float: right;
+      }
+    }
+    ul{
+      padding: 6px 0;
+      li {
+        line-height: 1.6;
+        .label {
+          color:#666;
+          padding-right:6px;
+        }
+      }
+      .substring {
+        width:80%;
+      }
+      .info {
+        span {
+          padding-right:0.5rem;
+        }
+        .name {
+          font-size: 1.15rem;
+        }
+        .sex,.age {
+          //color:#666;
+        }
+      }
+
+    }
+    button {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      border:1px solid $mainColor;
+      border-radius: 6px;
+      padding: 2px 10px;
+      color: $mainColor;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.detail {
+  position: fixed;
+  top:0px;
+  left:0;
+  bottom:0;
+  width:100%;
+  z-index: 100;
+  background: #fff;
+  &.fade-enter-active, &.fade-leave-active {
+    transition: all .5s;
+  }
+  &.fade-enter, &.fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+  .title {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 50px;
+    padding:0 10px;
+    span {
+      float:right;
+      font-size: 1.5rem;
+      color:#666;
+      cursor: pointer;
+    }
+  }
+  .item {
+    padding:10px;
+    .time {
+      color:#666;
+      font-size: 0.875rem;
+      line-height: 2.6;
+      .date {
+        float:right;
+      }
+    }
+    .ul {
+      padding: 10px 0;
+      li {
+        line-height: 40px;
+        border-bottom:1px solid $border;
+        &:last-child {
+          border:none;
+        }
+        label {
+          float:left;
+          padding-right:10px;
+        }
+        .drug {
+          display: block;
+          overflow: hidden;
+          p {
+            color:red;
+            font-size: 0.875rem;
+            line-height: 1rem;
+            padding-bottom:10px;
+            span {
+              padding:0 6px;
+            }
+          }
+          .num {
+            float:right;
+            color:#333;
+          }
+        }
+      }
+      .doctor {
+        text-align: right;
+        span {
+          padding-right:20px;
+        }
+        .l {
+          color:#666;
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+
+}
+

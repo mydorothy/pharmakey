@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0 user-scalable=no"/>
+    <title>处方详情</title>
+    <link rel="stylesheet" href="./css/fonts/iconfont.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script src="js/plugs/jquery.min.js"></script>
+
+    <script src="js/plugs/vue.js"></script>
+    <script src="js/plugs/vue-resource.js"></script>
+    <script src="js/plugs/bscroll.js"></script>
+    <script src="js/plugs/vue-mobile-calendar.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--头部-->
+        <times ref="headTime"></times>
+        <!--列表-->
+        <div ref="content" class="content">
+            <div class="items">
+                <div class="down-update" v-html="downText"></div>
+                <ul>
+                    <li class="item" v-for="(item,index) in items">
+                        <div class="border-b-1 title">
+                            <span>处方号：HY1000002</span>
+                            <span class="date">开方日期：03-11</span>
+                        </div>
+                        <ul class="border-b-1">
+                            <li class="info">
+                                <span class="name">玲儿</span>
+                                <span class="sex">女</span>
+                                <span class="age">24岁</span>
+                            </li>
+                            <li class="substring">
+                                <span class="label">科室</span>
+                                <span>小儿麻痹精神科</span>
+                            </li>
+                            <li class="substring">
+                                <span class="label">诊断</span>
+                                <span>小儿腹泻呕吐</span>
+                            </li>
+                        </ul>
+                        <button @click="showModal($event,item)">调阅</button>
+                    </li>
+                </ul>
+                <div class="up-updata" v-html="upText"></div>
+            </div>
+        </div>
+        <!--详情-->
+        <div>
+            <modal-detail :item="selectedItem" ref="modalDetail"></modal-detail>
+        </div>
+    </div>
+
+    <!--头部模板-->
+    <script type="text/x-template" id="time-template">
+        <header class="header">
+            <ul class="border-b-1 time-items" >
+                <li>
+                    <input @click="startTimeClick" readonly v-model="startTime.selectedDate"/>
+                    <calendar
+                            v-model="startTime.calendarShow"
+                            :defaultDate="startTime.defaultDate"
+                            @change="startTimeChange">
+                    </calendar>
+                </li>
+                <span>--</span>
+                <li>
+                    <input @click="endTimeClick" readonly v-model="endTime.selectedDate"/>
+                    <calendar
+                            v-model="endTime.calendarShow"
+                            :defaultDate="endTime.defaultDate"
+                            @change="endTimeChange">
+                    </calendar>
+                </li>
+            </ul>
+            <div class="border-b-1 search">
+                <input type="text" />
+                <button @clic="searchFun()">查询</button>
+            </div>
+        </header>
+    </script>
+
+    <script src="js/common.js"></script>
+    <script src="js/components/modal.js"></script>
+    <script src="js/components/time.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
